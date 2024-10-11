@@ -1,0 +1,67 @@
+   Polymorphism:
+                Method Overloading (static polymorphism) + Method Overriding(dynamic polymorphism)
+
+                OOP'nin (Object Oriented Programming-Nesne yönelimli programlama) prensiplerinin biridir.
+                Polymorphism (cok bicimlilik) demektir.
+                Bir method'u, istedigimiz sonuclari alacak sekilde, farkli farkli sekilllerde calistirabilmek icin kullanilir.
+
+        i.Method Overloading : Java'da Method Overloading (Metot Aşırı Yükleme), aynı class içerisinde
+        aynı isme sahip ancak farklı parametre listelerine sahip birden fazla metodun tanımlanması işlemidir.
+
+ ,/* Method Overloading'de sadece parametreler degistirilir.
+          Boylelikle method signature degismis olur ve Java bu methodu yeni bir method gibi kabul eder.
+
+        Method Overloading icin;
+        a) Parametre sayisini degistirebilirsiniz.
+        b) Parametre data tiplerini degistirebilirsiniz.
+        c) Parametre data tipleri farkli ise parametrelerin yerlerini degistirebilirsiniz.
+        d)Method overloading olustururken return type'in, access modifier'in,
+           static veya non-static olmanin hicbir etkisi yoktur.
+           */
+ /*
+ Soru 1: private method'lar overload edilebilir mi?
+
+ Cevap 1: private method'lar overload edilebilirler cunku;
+ overload islemi tek class icinde yapilir, private methodlar ayni class'in icinden
+ ulasilabilir oldugundan overload'a engel degildir.
+
+ Soru 2: static method'lar overload edilebilir mi?
+ Cevap 2: static method'lar overload edilebilir cunku esasinda overload'da biz yeni method'lar olustururuz.
+ */
+
+         //NON-STATIC - STATIC
+         //String s = "Java";
+         //  s.substring() => Bu methodu bir string objesi üzerinden cağırırız. Böyle methodlara non-static denir.
+         // Math.min() => böyle direk class ismiyle çağrılanlar statictir böyle methodlara statıc method denir.
+
+ //2.Polymorphism:
+    //Method Overloading + Method Overriding
+
+    //OOP'nin prensiplerinin 2.sidir. Polymorphism (cok bicimlilik) demektir.
+    //Bir method'u, istedigimiz sonuclari alacak sekilde, farkli farkli sekilllerde calistirabilmek icin kullanilir.
+
+    //iki cesidi var.
+
+    // i.Method Overloading: Bunu gormustuk methodu parametreleri ni arttirarak uzerine eklemeler yapilmasidir (uzerine yukleme denebilir)
+
+        //ii.Method Overriding (gecersiz kilmak, agir basan) --  uzerine yazma eskiyi gecersiz kilma olarak anlasilabilir
+        // Child class’in Parent’taki methodu degistirerek kullanmasidir.
+        // ihtiyac olmadikca cok kullanmamak gerekir override islemini
+    //-------------------
+    //Override isleminde access modifier’larin durumlari ne olmalidir, onu ogrenelim !!!!
+    /*Soru1: private method'lar override edilebilir mi?
+    Cevap1: private method'lar override edilemezler cunku
+    override edebilmek icin o method'a baska bir class'dan ulasabilmek gerekir.
+    Ama private method'lar baska classlardan ulasilamaz methodlardir.
+
+    Not: child'in access modifier'i parent'tan daha dar olamaz.
+    Ornek: parent public - child protected olamaz cunku bu hata,
+    Child class'ının eat metodunun, Parent class'ının eat metodundan daha az erişilebilir olmasından kaynaklanır.
+     */
+     //////-------UPCASTING
+     public Animal create(){
+             return new Dog(); // upcasting -- yukarinin kalibina doktuk
+             // yani burda ustten miras aldigimiz icin retur degeri artik
+             // hem Animal olabilir hemde Dog olabilir bu isleme upcasting denir.
+
+         }

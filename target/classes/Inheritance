@@ -1,0 +1,40 @@
+ Inheritance - Miras Alma
+        1.Inheritance, OOP'nin dort temel ozelliginin 1.sidir.Ozellikleri bir class'tan diğer class'lara alan bir kavramdır.
+        /*Bunun Java daki karsiligi sudur: Siz bir class olusturacaksiniz ama daha once olusturulmus
+            bir class sizin istediginiz ozelliklerin bircogunu kapsiyor.
+            *****O zaman direkt yeni olusturdugunuz classi, ozelliklerini kullanmak istediginiz classa 'child' yapmalisiniz.
+            Bunu da 'extends' keyword'unu kullanarak yapiyoruz.*/
+
+            /*Inheritance'in Faydalari nelerdir?
+
+            1) Kodun yeniden kullanılmasına yardımcı olur.
+            2) Ana kodun tekrar yazılmasına gerek olmadığı için, daha az kod yazarak, zamandan ve emekten tasarruf sağlayabiliriz.
+            3) Kolayca update yapabiliriz.
+            4) Class'lari kuculturuz.
+            5) Daha az geliştirme ve bakım maliyetine yol açar.
+
+ //---------Özel Durumlar
+        a) Java ‘Multiple Inheritance’ i desteklemez. ‘Single Inheritance’ i destekler.
+     public class Bird extends Animal, Mammal {  // Bu şekil olamaz iki parnttan miras alamassın
+
+       b) Parent ve birden fazla child ile olusturulan inheritance yapilanmasina ‘Hierarchical Inheritance’ denir ve Java bunu kabul eder.
+
+       c) Ama coklu parent'lardan yararlanamamak iyi olmadi.
+           Ozelliklerini inherit etmek istedigimiz class'lar birden fazla ise (parent'lar) o durumda Java bize,
+           Apartman tarzi yapilanma olusturmustur.( 'Multi Level Inheritance') Java bunu kabul eder.*/
+
+        d)  **** Java'da parent'tan child'a olan iliskilere HAS-A Relationship denir ( Burda alttaki veriye sahiptir. HAS-A )
+            **** Java'da child'tan parent'a olan iliskilere IS-A Relationship denir  ( Burda Üstekidir.  IS-A )
+            /*
+            HAS-A Relationship, bir class'in başka bir class'i içerdiği ilişkiyi ifade eder.
+            Yani, bir class başka bir class'in bir parçası olduğunda HAS-A ilişkisi vardır.
+            Bu ilişki bileşim (composition) veya toplama (aggregation) ile sağlanır.
+
+            IS-A Relationship, bir class'in başka bir class'in bir türü olduğu anlamına gelir.
+            Bu ilişki, bir class'in  başka bir class'tan türediği (miras aldığı) durumlarda ortaya çıkar.
+            Bu durum kalıtım (inheritance) ile sağlanır.
+
+            IS-A ilişkisi child class'tan parent class'a doğru çalışır.
+            Yani, bir alt class üst class'in bir türüdür.
+             */
+

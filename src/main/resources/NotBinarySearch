@@ -1,0 +1,14 @@
+
+        //binarySearch() methodu var olan elemanlar icin size o elemanin index’ini verir
+        //binarySearch() methodunu sort() kullanmadan kullanmayiniz
+        //binarySearch() methodu olmayan elemanlar icin size negatif tamsayi verir
+        // “-” ==> isaretinin anlami eleman yok demektir
+
+        /*
+        Yani, metot şu şekilde çalışır:
+            Diziyi ikiye bölün.
+            Aranan değer, ortadaki elemana eşitse, arama tamamlanır.
+            Aranan değer, ortadaki elemandan küçükse, dizinin sol yarısında aramaya devam edilir.
+            Aranan değer, ortadaki elemandan büyükse, dizinin sağ yarısında aramaya devam edilir.
+            Bu işlem, aranan değer bulunana veya dizi içinde aranacak bir alt dizi kalmayana kadar tekrar edilir.
+        */
