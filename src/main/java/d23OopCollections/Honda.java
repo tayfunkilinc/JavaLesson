@@ -1,10 +1,10 @@
-package d22oop;
+package d23OopCollections;
 
 public abstract class Honda { // methodlari abstract yapabilmek icin clasida abstract yapmak zorundayiz
     /*
         4- Abstraction(Soyut)
         Abstraction iki bolumden olusur.
-        i) Abstract Class:
+        i) Abstract Class: icinde abstruct bir method olmasi o class in abstruct olmasina yeterlimi
         abbstruct class lar hayvanlar alemini olusturdugumuz bir projede
         ***Kendisinden object olusturulmaz. Bazi class'lari obje olusturmak amaciyla degil,
         objeleri gruplara ayirmak ve genel ozellikleri belirlemek icin olustururuz.
@@ -31,10 +31,25 @@ public abstract class Honda { // methodlari abstract yapabilmek icin clasida abs
     //Java’da bir abstract class, normal (somut) bir class’in child’i olabilir.
     //----------------------
 
+
     // neden body siz bir method koyarim bir class icine
     //cevap ------>  bir engine(); abstruct methodunu tum arabalar kullanmak zorunda moorsuz araba olmaz
 
     // bir seylere kullanmaya zorlamanin yolu bu ornekte oldugu gibi abstruct kullanmaktir
+
+    //---------------------
+    //7) Final methodlar override edilemedigi icin, abstract olamazlar.
+    // (***“final” bir access modifier değildir. “final,” bir Java anahtar kelimesidir)
+    // final class in childi olmaz
+    //final methodlar override adilemez  -- bu sebeplede abstruct olamaz cunku kimse kullanamaz
+    //final Variable lara yeni deger atanamaz
+    //----------------------
+    //8) Abstract bir class'in abstract bir child'i olabilir ve abstract child parent'inin methodlarini
+    // override etmek zorunda degildir ama isterse de edebilir
+    //--------------------
+    //9) Abstract bir class private olamaz yoksa child’lari ona ulasip override edemez buda cocugu olamamasina sebep olur
+    //-------------------
+
 
     public void music(){
         System.out.println("Pro Music System");

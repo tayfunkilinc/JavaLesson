@@ -1,6 +1,6 @@
-package d22oop;
+package d23OopCollections;
 
-public class Civic extends  Honda{
+public class Civic extends Honda {
     // sadece extend etmek abstract class lardan miras almaya yetmez
     // abstract methodlari kullanmamiz zorunludur
     @Override
