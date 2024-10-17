@@ -115,6 +115,6 @@ public class Sets01 {
         System.out.println(ss); //[G, R]
         SortedSet<Character> ss1 = ts.subSet('B','H');
         System.out.println(ss1); //[G] -- burdada ayni ekil B den basladi H ye kadar aradi bu arda sadece G harfi bizim sette var onu donderdi
-
+        
     }
 }
