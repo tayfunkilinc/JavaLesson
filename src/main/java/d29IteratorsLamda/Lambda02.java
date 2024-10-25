@@ -8,9 +8,6 @@ public class Lambda02 {
     public static void main(String[] args) {
         List<Integer> nums = new ArrayList<>(Arrays.asList(2, 3, 4, 5, 11, 10));
         printSquareOfOddElements(nums); // 9 25 121
-
-
-
     }
 
          //ornek 1: Bir tamsayı listesi alan ve listedeki tek sayıların karelerini,
