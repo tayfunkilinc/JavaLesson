@@ -1,10 +1,12 @@
 package d30Lambda;
 
+import d28ExeptionEnum.EnumRunner;
+
 import java.util.*;
 
 public class Lambda03 {
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>(Arrays.asList(2, 3, 4, 5, 11, 10)); // burda sayilari surekli degistirdik calisirken ciktilar degisebilir dikkat et
+        List<Integer> nums = new ArrayList<>(Arrays.asList(2, 3, 4, 5, 11, 10, 14)); // burda sayilari surekli degistirdik calisirken ciktilar degisebilir dikkat et
         //printCubeOfDistinctOddElements(nums); //3. ornek icin method
         //printSumOfSquaresOfDistinctEvenElements(nums);
         //printProductOfSquareOfDistinctEvenElements(nums);
@@ -16,7 +18,8 @@ public class Lambda03 {
         //minimum2(nums);
         //minimum3(nums);
         //minimum4(nums);
-        minimum5(nums);
+        //minimum5(nums);
+        getMinGreaterThanSevenEven(nums);
     }
     //---------------------------------------------
     //3) Bir tamsayı listesindeki tek sayıların küplerini, tekrarlanmadan, aynı satırda,
@@ -173,5 +176,32 @@ public class Lambda03 {
         Integer min = nums.stream().distinct().reduce(Math::min).get(); //  bu sekildede referance ile kullanimini yaptik
         System.out.println(min); // 2
     }
+
+    //-------------------------------------------
+    //8) Verilen listedeki 7'den büyük en küçük çift sayıyı bulan bir yöntem oluşturun.
+    //2, 3, 4, 5, 11, 10, 14 ==> 10 <-- 7’den buyuk en kucuk cift sayi
+    //8) Create a method that finds the smallest even number greater than 7 in the given list.
+    //2, 3, 4, 5, 11, 10, 14 ==> 10 <-- Smallest even number greater than 7
+    public static void getMinGreaterThanSevenEven(List<Integer> nums){
+        //findFirst(): Sıralı akışta bulunan ilk elemanı (yani yani bu senaryo da en küçük elemanı) alır.
+        // Bu işlem bir Optional döndürür, çünkü akışta hiç eleman kalmamış olabilir
+        // (filtreleme nedeniyle veya başka bir sebepten dolayı)
+        //Optional null gelme olasiligini goz onuna alir
+
+       /* Integer min = nums.stream().
+                filter(t -> t>7 && t % 2 ==0).
+                sorted().
+                reduce((t,u)->t).
+                get();
+        System.out.println(min); //10
+         */
+        Integer min = nums.stream().
+                filter(t -> t>7 && t % 2 ==0).
+                sorted(). //10 ,14
+                findFirst().get(); // findFirst() bu ilk elemani alir sirali oldugu icin direk sonuca gittik buyuk bulurkende tamtersi siralayip bulabiliriz
+        System.out.println(min); //10
+    }
+
+
 
 }
