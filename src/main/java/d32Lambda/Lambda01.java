@@ -140,10 +140,5 @@ public class Lambda01 {
             Stream'i sonlandırır. Bir Stream üzerinde işlem yapabilmek için en az bir terminal
             operasyonunun çağrılması gerekmektedir, çünkü intermediate operasyonlar tembeldir
             ve sadece terminal operasyon çağrıldığında gerçekte çalıştırılır. Tek bir terminal olur*/
-
-
-
-
-
     }
 }
